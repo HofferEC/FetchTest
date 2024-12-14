@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 /**
  * Catches exceptions the service might encounter and provides more relevant error messages to the client.
  */
-@ControllerAdvice
 @Slf4j
+@ControllerAdvice
 public class ApplicationExceptionHandler {
 
     @ResponseStatus(
@@ -41,8 +41,8 @@ public class ApplicationExceptionHandler {
     }
 
     /**
-     *  Catch all exception handler. If some exception doesn't match a different path, it will get routed here and only
-     *  show a generic 500 error to clients for security.
+     *  Catch all exception handler. If some exception doesn't match a different handler, it will get routed here and
+     *  only show a generic 500 error to clients for security.
      */
     @ResponseStatus(
             value = HttpStatus.INTERNAL_SERVER_ERROR,
